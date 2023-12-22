@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>खेल वेबसाइट</title>
+    <style>line 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #red;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>खेल वेबसाइट</h1>
+</header>
+
+<nav>
+    <a href="#">घर</a>
+    <a href="#">खेलहरू</a>
+    <a href="#">वालेट</a>
+    <a href="#">बाहिर निस्कनु</a>
+    <a href="#">जम्मा</a>
+    <a href="#">फिर्ता लिने</a>
+</nav>
+
+<section>
+    <h2>हाम्रो खेल वेबसाइटमा स्वागत छ!</h2>
+    <p>हाम्रो खेलहरूको संग्रह अन्वेषण गर्नुहोस् र गेमिङ अनुभवको आनन्द लिनुहोस्.</p>
+</section>
+
+<footer>
+    <p>&copy; 2023 Game Website. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+/* CSS for button hover effect */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}/* CSS for box shadow effect */
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #ecf0f1;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}/* CSS for keyframe animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.bouncing-element {
+  animation: bounce 2s infinite;
+}/* CSS for gradient background animation */
+.animated-gradient {
+  background: linear-gradient(45deg, #3498db, #2ecc71, #e74c3c, #f39c12);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}/* CSS for setting a background image */
+body {
+  background-image: url('your-image-url.jpg');
+  background-size: cover; /* Adjusts the background image size to cover the entire screen */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  height: 100vh; /* Ensures the background covers the full height of the viewport */
+  margin: 0; /* Removes default margin for the body */
+}
+
+/* Additional styles for the content on top of the background */
+.content {
+  padding: 20px;
+  color: #fff; /* Adjust text color to be visible against the background */
+}
+
+/* Example of styling a heading */
+h1 {
+  font-size: 2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle text shadow for better readability */
+}<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Drawing Example</title>
+</head>
+
+<body>
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+    </svg>
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Betting Game</title>
+    <style>
+        /* Add your styles for the game UI here */
+        #betInput {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cricket Betting Game</h1>
+    <p>Guess the outcome of the cricket match and place your bet:</p>
+
+    <label for="betInput">Your Bet:</label>
+    <input type="number" id="betInput" min="1" max="100">
+    <button onclick="placeBet()">Place Bet</button>
+
+    <p id="result"></p>
+
+    <script>
+        function placeBet() {
+            // Get the user's bet from the input field
+            const userBet = document.getElementById('betInput').value;
+
+            // Generate a random number between 1 and 100 (simulating cricket match outcome)
+            const matchOutcome = Math.floor(Math.random() * 100) + 1;
+
+            // Compare the user's bet with the match outcome
+            if (userBet == matchOutcome) {
+                document.getElementById('result').innerHTML = 'Congratulations! You won!';
+            } else {
+                document.getElementById('result').innerHTML = `Sorry, you lost. The match outcome was ${matchOutcome}.`;
+            }
+        }
+    </script>
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Betting Game</title>
+    <style>
+        /* Add your styles for the game UI here */
+        #betInput {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Dice Betting Game</h1>
+    <p>Place your bet and roll the dice:</p>
+
+    <label for="betInput">Your Bet:</label>
+    <input type="number" id="betInput" min="1" max="6">
+    <button onclick="rollDice()">Roll Dice</button>
+
+    <p id="diceResult"></p>
+    <p id="betResult"></p>
+
+    <script>
+        function rollDice() {
+            // Get the user's bet from the input field
+            const userBet = parseInt(document.getElementById('betInput').value);
+
+            // Generate a random number between 1 and 6 (simulating a dice roll)
+            const diceResult = Math.floor(Math.random() * 6) + 1;
+
+            // Display the dice result
+            document.getElementById('diceResult').innerHTML = `Dice Result: ${diceResult}`;
+
+            // Compare the user's bet with the dice result
+            if (userBet === diceResult) {
+                document.getElementById('betResult').innerHTML = 'Congratulations! You won!';
+            } else {
+                document.getElementById('betResult').innerHTML = 'Sorry, you lost. Try again!';
+            }
+        }
+    </script>
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head or Tail Betting Game</title>
+    <style>
+        /* Add your styles for the game UI here */
+        #betInput {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Head or Tail Betting Game</h1>
+    <p>Choose "Head" or "Tail" and place your bet:</p>
+
+    <label for="betInput">Your Bet:</label>
+    <select id="betInput">
+        <option value="100">100</option>
+        <option value="200">200</option>
+        <option value="300">300</option>
+    </select>
+
+    <button onclick="tossCoin()">Toss Coin</button>
+
+    <p id="coinResult"></p>
+    <p id="betResult"></p>
+
+    <script>
+        function tossCoin() {
+            // Get the user's bet amount and choice
+            const betAmount = parseInt(document.getElementById('betInput').value);
+            const userChoice = document.getElementById('betInput').selectedIndex; // 0 for Head, 1 for Tail
+
+            // Generate a random number (0 for Head, 1 for Tail)
+            const coinResult = Math.floor(Math.random() * 2);
+
+            // Display the coin toss result
+            const resultText = coinResult === 0 ? 'Head' : 'Tail';
+            document.getElementById('coinResult').innerHTML = `Coin Result: ${resultText}`;
+
+            // Compare the user's choice with the coin toss result
+            if (userChoice === coinResult) {
+                document.getElementById('betResult').innerHTML = `Congratulations! You won ${betAmount} coins!`;
+            } else {
+                document.getElementById('betResult').innerHTML = `Sorry, you lost ${betAmount} coins. Try again!`;
+            }
+        }
+    </script>
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head or Tail Betting Game</title>
+    <style>
+        /* Add your styles for the game UI here */
+        #betInput {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Head or Tail Betting Game</h1>
+    <p>Choose "Head" or "Tail" and place your bet:</p>
+
+    <label for="betInput">Bet Amount:</label>
+    <input type="number" id="betInput" min="100" step="100" placeholder="Enter amount" required>
+
+    <label for="choice">Your Choice:</label>
+    <select id="choice" required>
+        <option value="head">Head</option>
+        <option value="tail">Tail</option>
+    </select>
+
+    <button onclick="tossCoin()">Toss Coin</button>
+
+    <p id="coinResult"></p>
+    <p id="betResult"></p>
+
+    <script>
+        function tossCoin() {
+            // Get the user's bet amount and choice
+            const betAmount = parseInt(document.getElementById('betInput').value);
+            const userChoice = document.getElementById('choice').value;
+
+            // Validate that the user has selected a choice and entered a valid bet amount
+            if (!userChoice || isNaN(betAmount) || betAmount < 100) {
+                alert('Please enter a valid bet amount and select "Head" or "Tail".');
+                return;
+            }
+
+            // Generate a random number (0 for Head, 1 for Tail)
+            const coinResult = Math.floor(Math.random() * 2);
+
+            // Display the coin toss result
+            const resultText = coinResult === 0 ? 'Head' : 'Tail';
+            document.getElementById('coinResult').innerHTML = `Coin Result: ${resultText}`;
+
+            // Compare the user's choice with the coin toss result
+            if (userChoice === resultText.toLowerCase()) {
+                document.getElementById('betResult').innerHTML = `Congratulations! You won ${betAmount} coins!`;
+            } else {
+                document.getElementById('betResult').innerHTML = `Sorry, you lost ${betAmount} coins. Try again!`;
+            }
+        }
+    </script>
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <style>
+        /* Add your styles for the banking UI here */
+        #amountInput {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Banking System</h1>
+
+    <h2>Your Balance: <span id="balance">1000</span> coins</h2>
+
+    <label for="amountInput">Amount:</label>
+    <input type="number" id="amountInput" min="1" placeholder="Enter amount">
+
+    <button onclick="deposit()">Deposit</button>
+    <button onclick="withdraw()">Withdraw</button>
+
+    <script>
+        let balance = 1000; // Initial balance
+
+        function updateBalance() {
+            document.getElementById('balance').innerText = balance;
+        }
+
+        function deposit() {
+            const amount = parseInt(document.getElementById('amountInput').value);
+
+            if (!isNaN(amount) && amount > 0) {
+                balance += amount;
+                updateBalance();
+                alert(`Deposited ${amount} coins. New balance: ${balance} coins`);
+            } else {
+                alert('Please enter a valid amount for deposit.');
+            }
+        }
+
+        function withdraw() {
+            const amount = parseInt(document.getElementById('amountInput').value);
+
+            if (!isNaN(amount) && amount > 0 && amount <= balance) {
+                balance -= amount;
+                updateBalance();
+                alert(`Withdrawn ${amount} coins. New balance: ${balance} coins`);
+            } else if (amount > balance) {
+                alert('Insufficient funds for withdrawal.');
+            } else {
+                alert('Please enter a valid amount for withdrawal.');
+            }
+        }
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Graphics with Three.js</title>
+  <style>
+    body { margin: 0; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <script src="https://threejs.org/build/three.js"></script>
+  <script>
+    // Set up scene
+    const scene = new THREE.Scene();
+
+    // Set up camera
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 5;
+
+    // Set up renderer
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // Create a cube
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+
+    // Animation function
+    const animate = () => {
+      requestAnimationFrame(animate);
+
+      // Rotate the cube
+      cube.rotation.x += 0.01;
+      cube.rotation.y += 0.01;
+
+      // Render the scene
+      renderer.render(scene, camera);
+    };
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    // Start the animation
+    animate();
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <style>
+    /* Add your styles here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f2f2f2;
+      padding: 0.5em;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="games.html">खेलहरु</a>
+    <!-- Add more navigation links as needed -->
+  </nav>
+
+  <div>
+    <!-- Your page content goes here -->
+    <p>Welcome to my website!</p>
+  </div>
+
+  <script>
+    // You can add additional JavaScript logic here
+  </script>
+</body>
+</html>
+<!-- games.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>खेलहरु - Betting Games</title>
+  <style>
+    /* Add your styles here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f2f2f2;
+      padding: 0.5em;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .game {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>खेलहरु - Betting Games</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">खेलहरु</a>
+    <!-- Add more navigation links as needed -->
+  </nav>
+
+  <main>
+    <div class="game">
+      <h2>Game 1: Coin Toss</h2>
+      <p>Guess the outcome of a coin toss!</p>
+      <button onclick="coinToss()">Toss Coin</button>
+      <p id="coinResult"></p>
+    </div>
+
+    <div class="game">
+      <h2>Game 2: Dice Roll</h2>
+      <p>Guess the number on a six-sided die!</p>
+      <button onclick="rollDice()">Roll Dice</button>
+      <p id="diceResult"></p>
+    </div>
+
+    <!-- Add more games as needed -->
+  </main>
+
+  <script>
+    function coinToss() {
+      const result = Math.random() < 0.5 ? 'Heads' : 'Tails';
+      document.getElementById('coinResult').innerText = `Result: ${result}`;
+    }
+
+    function rollDice() {
+      const result = Math.floor(Math.random() * 6) + 1;
+      document.getElementById('diceResult').innerText = `Result: ${result}`;
+    }
+  </script>
+</body>
+</html>
+<!-- games.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>खेलहरु - Betting Games</title>
+  <style>
+    /* Add your styles here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f2f2f2;
+      padding: 0.5em;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .game {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Add styles for the coin animation container */
+    #coin-container {
+      width: 200px;
+      height: 200px;
+      margin: 20px auto;
+      perspective: 1000px;
+    }
+
+    #coin {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 2s ease-in-out;
+    }
+
+    .side {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .front {
+      background-color: gold;
+    }
+
+    .back {
+      background-color: silver;
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>खेलहरु - Betting Games</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">खेलहरु</a>
+    <!-- Add more navigation links as needed -->
+  </nav>
+
+  <main>
+    <div class="game">
+      <h2>Game 1: Coin Toss</h2>
+      <p>Guess the outcome of a coin toss!</p>
+
+      <!-- Add the coin animation container -->
+      <div id="coin-container">
+        <div id="coin">
+          <div class="side front"></div>
+          <div class="side back"></div>
+        </div>
+      </div>
+
+      <button onclick="coinToss()">Toss Coin</button>
+      <p id="coinResult"></p>
+    </div>
+  </main>
+
+  <script src="https://threejs.org/build/three.js"></script>
+  <script>
+    function coinToss() {
+      const coin = document.getElementById('coin');
+      const resultElement = document.getElementById('coinResult');
+
+      // Disable button during animation
+      document.querySelector('button').disabled = true;
+
+      // Set up Three.js scene
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 10);
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize(200, 200);
+      document.getElementById('coin-container').appendChild(renderer.domElement);
+
+      // Create coin geometry
+      const geometry = new THREE.CylinderGeometry(1, 1, 0.1, 100);
+      const materialFront = new THREE.MeshBasicMaterial({ color: 0xFFD700 });
+      const materialBack = new THREE.MeshBasicMaterial({ color: 0xC0C0C0 });
+      const coinMesh = new THREE.Mesh(geometry, [materialFront, materialBack]);
+      scene.add(coinMesh);
+
+      // Random rotation for visual effect
+      const randomRotation = Math.random() * 10;
+
+      // Animation loop
+      const animate = () => {
+        requestAnimationFrame(animate);
+
+        coinMesh.rotation.y += 0.1;
+        coinMesh.rotation.x += 0.1;
+
+        if (coinMesh.rotation.y > Math.PI * 2 + randomRotation) {
+          // Animation completed
+          const result = Math.random() < 0.5 ? 'Heads' : 'Tails';
+          resultElement.innerText = `Result: ${result}`;
+          document.querySelector('button').disabled = false;
+          renderer.domElement.remove(); // Remove Three.js canvas
+        }
+
+        renderer.render(scene, camera);
+      };
+
+      animate();
+    }
+  </script>
+</body>
+</html>
+/* Add your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #5CAF50;
+    color: green;
+    text-align: center;
+    padding: 1em;
+}
+
+nav {
+    background-color: #444;
+    color: red;
+    padding: 0.5em;
+}
+
+/* Add more styles for other sections as needed */
+// Add your JavaScript code here
+document.addEventListener("DOMContentLoaded", function() {
+    var homeLink = document.getElementById("homeLink");
+
+    homeLink.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default behavior of the link
+
+        // Change the background color to red
+        document.body.style.backgroundColor = "red";
+    });
+});
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Toss Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #result {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Coin Toss Game</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" id="homeLink">Home</a></li>
+            <li><a href="#" id="coinToss">Coin Toss</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+    <section>
+        <article>
+            <button id="tossButton">Toss Coin</button>
+            <p id="result"></p>
+        </article>
+    </section>
+    <footer>
+        <p>&copy; 2023 Your Website</p>
+    </footer>
+</body>
+</html>git clone https://github.com/your-username/your-repository.git
+cd your-repository
+git add index.html
+git commit -m "Add index.html"
+git push origin main
